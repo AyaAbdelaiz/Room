@@ -14,7 +14,7 @@ import com.ayaabdelaziz.roomdatabasedemo.fragments.adapter.ListAdapter
 import com.ayaabdelaziz.roomdatabasedemo.viewmodel.UserViewModel
 import kotlinx.android.synthetic.main.fragment_list.view.*
 
-class ListFragment : Fragment(), SearchView.OnQueryTextListener {
+class ListFragment : Fragment(){
 
     private lateinit var userViewModel: UserViewModel
     val listAdapter = ListAdapter()
@@ -43,10 +43,10 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_, menu)
-        val search = menu.findItem(R.id.search)
-        val searchView = search?.actionView as? SearchView
-        searchView?.isSubmitButtonEnabled = true
-        searchView?.setOnQueryTextListener(this)
+//        val search = menu.findItem(R.id.search)
+//        val searchView = search?.actionView as? SearchView
+//        searchView?.isSubmitButtonEnabled = true
+//        searchView?.setOnQueryTextListener(this)
         //        object:SearchView.OnQueryTextListener{
 //            override fun onQueryTextSubmit(query: String?): Boolean {
 //                if (query != null) {
@@ -84,33 +84,33 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         builder.create().show()
     }
 
-    override fun onQueryTextSubmit(query: String?): Boolean {
+//    override fun onQueryTextSubmit(query: String?): Boolean {
+////        Toast.makeText(requireContext(), "nnnnnnininii", Toast.LENGTH_SHORT).show()
+////        if (query != null) {
+////            searchIn(query)
+////        }
+//        return false
+//    }
+//
+//    override fun onQueryTextChange(query: String?): Boolean {
 //        Toast.makeText(requireContext(), "nnnnnnininii", Toast.LENGTH_SHORT).show()
 //        if (query != null) {
 //            searchIn(query)
 //        }
-        return false
-    }
-
-    override fun onQueryTextChange(query: String?): Boolean {
-        Toast.makeText(requireContext(), "nnnnnnininii", Toast.LENGTH_SHORT).show()
-        if (query != null) {
-            searchIn(query)
-        }
-        return true
-    }
-    private fun searchIn(query: String) {
-        val searchQuery = "?$query?"
-        userViewModel.searchInList(searchQuery).observe(this, {
-            listAdapter.addList(it)
-//            Log.d("myyyyyyyy", "searchIn:+${it.get(11).firstName.toString()} ")
-        }
-//            { list ->
-//            list.let {
-//                listAdapter.addList(it)
-//            }
+//        return true
+//    }
+//    private fun searchIn(query: String) {
+//        val searchQuery = "?$query?"
+//        userViewModel.searchInList(searchQuery).observe(this, {
+//            listAdapter.addList(it)
+////            Log.d("myyyyyyyy", "searchIn:+${it.get(11).firstName.toString()} ")
 //        }
-        )}
+////            { list ->
+////            list.let {
+////                listAdapter.addList(it)
+////            }
+////        }
+//        )}
 
 
 }
