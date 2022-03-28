@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    tools:context=".fragments.update.UpdateFragment">
+
+
+    <EditText
+        android:id="@+id/editTextFirstNameUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:ems="15"
+        android:inputType="textPersonName"
+        android:hint="First Name"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextSecondNameUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextFirstNameUpdate"
+        android:layout_marginTop="15sp"
+        android:layout_marginStart="20dp"
+        android:ems="15"
+        android:inputType="textPersonName"
+        android:hint="Second Name"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextAgeUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextSecondNameUpdate"
+        android:layout_marginTop="15sp"
+        android:layout_marginStart="20dp"
+        android:ems="15"
+        android:inputType="number"
+        android:hint="Age"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextAgeUpdate"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:text="Update" />
+
+
+</RelativeLayout>
